@@ -23,11 +23,11 @@ const Footer = () => {
               </p>
               <p>
                 <span className="text-gray-400">Network:</span>
-                <span className="text-green-500 font-bold ml-2">Base</span>
+                <span className="text-white font-bold ml-2">Base</span>
               </p>
               <p>
                 <span className="text-gray-400">Available On:</span>
-                <span className="text-purple-400 font-bold ml-2">Ape Store</span>
+                <span className="text-blue-600 font-bold ml-2">Ape Store</span>
               </p>
             </div>
           </div>

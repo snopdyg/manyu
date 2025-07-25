@@ -1,35 +1,18 @@
-import { MessageCircle, Twitter, Users, TrendingUp } from "lucide-react"
+import { MessageCircle, Twitter } from "lucide-react"
 
 const Community = () => {
   const socialLinks = [
     {
       name: "Telegram",
       description: "Join our main community chat",
-      members: "5,000+",
       url: "https://t.me/manyuwifhat",
       icon: MessageCircle,
-      color: "from-blue-500 to-blue-600",
     },
     {
       name: "Twitter",
       description: "Follow for latest updates",
-      members: "10,000+",
       url: "https://twitter.com/manyuwifhat",
       icon: Twitter,
-      color: "from-sky-400 to-sky-500",
-    },
-  ]
-
-  const communityStats = [
-    {
-      label: "Community Members",
-      value: "15,000+",
-      icon: Users,
-    },
-    {
-      label: "Daily Active Users",
-      value: "2,500+",
-      icon: TrendingUp,
     },
   ]
 
@@ -39,23 +22,9 @@ const Community = () => {
         <div className="text-center mb-16">
           <h2 className="section-heading text-4xl md:text-5xl font-bold mb-6 font-cinzel">Join Our Community</h2>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto calligraphy leading-relaxed">
-            Connect with thousands of MANYU enthusiasts, stay updated with the latest developments, and be part of the
-            most engaging meme token community.
+            Connect with MANYU enthusiasts, stay updated with the latest developments, and be part of the most engaging
+            meme token community.
           </p>
-        </div>
-
-        {/* Community Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {communityStats.map((stat, index) => {
-            const IconComponent = stat.icon
-            return (
-              <div key={index} className="bg-black p-8 border border-blue-900/20 brush-stroke rounded-xl text-center">
-                <IconComponent className="text-blue-600 mx-auto mb-4" size={48} />
-                <h3 className="text-3xl font-bold text-white mb-2">{stat.value}</h3>
-                <p className="text-gray-400 text-lg">{stat.label}</p>
-              </div>
-            )
-          })}
         </div>
 
         {/* Social Links */}
@@ -68,17 +37,16 @@ const Community = () => {
                 className="bg-black p-10 border border-blue-900/20 brush-stroke rounded-xl hover:transform hover:scale-105 transition-all duration-300"
               >
                 <div className="text-center">
-                  <div className={`bg-gradient-to-r ${social.color} p-4 rounded-full inline-block mb-6`}>
+                  <div className="bg-blue-600 p-4 rounded-full inline-block mb-6">
                     <IconComponent className="text-white" size={32} />
                   </div>
                   <h3 className="text-2xl font-bold font-cinzel text-blue-600 mb-3">{social.name}</h3>
-                  <p className="text-gray-400 mb-2">{social.description}</p>
-                  <p className="text-blue-600 font-semibold mb-6">{social.members} members</p>
+                  <p className="text-gray-400 mb-6">{social.description}</p>
                   <a
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`bg-gradient-to-r ${social.color} text-white px-8 py-3 font-cinzel font-bold rounded-lg hover:opacity-90 transition-opacity inline-block`}
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-cinzel font-bold rounded-lg transition-all duration-300 inline-block"
                   >
                     Join {social.name}
                   </a>

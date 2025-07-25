@@ -30,13 +30,13 @@ const Hero = () => {
               <span className="text-gray-400 text-sm block">Total Supply</span>
               <span className="text-blue-600 font-bold text-lg">1,000,000,000 MANYU</span>
             </div>
-            <div className="bg-green-900/20 border border-green-600/30 px-6 py-3 rounded-lg">
+            <div className="bg-black/30 border border-gray-600/30 px-6 py-3 rounded-lg">
               <span className="text-gray-400 text-sm block">Network</span>
-              <span className="text-green-500 font-bold text-lg">Base</span>
+              <span className="text-white font-bold text-lg">Base</span>
             </div>
-            <div className="bg-purple-900/20 border border-purple-600/30 px-6 py-3 rounded-lg">
+            <div className="bg-blue-900/20 border border-blue-600/30 px-6 py-3 rounded-lg">
               <span className="text-gray-400 text-sm block">Available On</span>
-              <span className="text-purple-400 font-bold text-lg">Ape Store</span>
+              <span className="text-blue-600 font-bold text-lg">Ape Store</span>
             </div>
           </div>
 
