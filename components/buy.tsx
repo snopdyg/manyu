@@ -14,45 +14,51 @@ const Buy = () => {
   }
 
   return (
-    <section id="buy" className="py-24 bg-black">
+    <section id="buy" className="py-16 sm:py-24 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="section-heading text-4xl md:text-5xl font-bold mb-6 font-cinzel">How to Purchase MANYU</h2>
-          <p className="text-xl text-gray-400 max-w-4xl mx-auto calligraphy leading-relaxed">
-            Purchase MANYU tokens exclusively through Ape Store. Built on Base network for fast, low-cost transactions.
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="section-heading text-2xl sm:text-4xl md:text-5xl font-bold mb-6 font-cinzel text-white">
+            How to Purchase <span className="text-blue-600">MANYU</span>
+          </h2>
+          <p className="text-base sm:text-xl text-gray-400 max-w-4xl mx-auto calligraphy leading-relaxed">
+            Purchase <span className="text-blue-600">MANYU tokens</span> exclusively through{" "}
+            <span className="text-blue-600">Ape Store</span>. Built on{" "}
+            <span className="text-blue-600">Base network</span> for fast, low-cost transactions.
           </p>
         </div>
 
         {/* Token Information Card */}
-        <div className="mb-16 bg-blue-900/20 border border-blue-600/30 p-10 brush-stroke rounded-xl">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold font-cinzel text-blue-600 mb-4">MANYU WIF HAT Token</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-lg">
-              <div className="bg-black/30 p-4 rounded-lg">
-                <span className="text-gray-400 block mb-2">Token Symbol</span>
-                <span className="text-white font-bold text-xl">MANYU</span>
+        <div className="mb-12 sm:mb-16 bg-blue-900/20 border border-blue-600/30 p-6 sm:p-10 brush-stroke rounded-xl">
+          <div className="text-center mb-6 sm:mb-8">
+            <h3 className="text-xl sm:text-3xl font-bold font-cinzel text-white mb-4">
+              <span className="text-blue-600">MANYU WIF HAT</span> Token
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 text-base sm:text-lg">
+              <div className="bg-black/30 p-3 sm:p-4 rounded-lg">
+                <span className="text-white block mb-2 text-sm sm:text-base">Token Symbol</span>
+                <span className="text-blue-600 font-bold text-lg sm:text-xl">MANYU</span>
               </div>
-              <div className="bg-black/30 p-4 rounded-lg">
-                <span className="text-gray-400 block mb-2">Total Supply</span>
-                <span className="text-blue-600 font-bold text-xl">1,000,000,000</span>
+              <div className="bg-black/30 p-3 sm:p-4 rounded-lg">
+                <span className="text-white block mb-2 text-sm sm:text-base">Total Supply</span>
+                <span className="text-blue-600 font-bold text-lg sm:text-xl">1,000,000,000</span>
               </div>
-              <div className="bg-black/30 p-4 rounded-lg">
-                <span className="text-gray-400 block mb-2">Network</span>
-                <span className="text-white font-bold text-xl">Base</span>
+              <div className="bg-black/30 p-3 sm:p-4 rounded-lg">
+                <span className="text-white block mb-2 text-sm sm:text-base">Network</span>
+                <span className="text-blue-600 font-bold text-lg sm:text-xl">Base</span>
               </div>
             </div>
           </div>
 
           {/* Contract Address */}
-          <div className="bg-black/50 border border-blue-900/30 p-6 rounded-lg text-center">
-            <p className="text-gray-400 mb-3 text-lg">Contract Address</p>
-            <div className="flex items-center justify-center gap-3">
-              <code className="text-blue-600 font-mono text-lg bg-blue-900/20 px-4 py-2 rounded-lg">
+          <div className="bg-black/50 border border-blue-900/30 p-4 sm:p-6 rounded-lg text-center">
+            <p className="text-white mb-3 text-base sm:text-lg">Contract Address</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <code className="text-blue-600 font-mono text-sm sm:text-lg bg-blue-900/20 px-3 sm:px-4 py-2 rounded-lg break-all">
                 {contractAddress}
               </code>
               <button
                 onClick={copyToClipboard}
-                className="p-3 hover:bg-blue-900/20 rounded-lg transition-colors"
+                className="p-2 sm:p-3 hover:bg-blue-900/20 rounded-lg transition-colors"
                 title="Copy to clipboard"
               >
                 {copied ? (
@@ -66,16 +72,20 @@ const Buy = () => {
         </div>
 
         {/* Ape Store Section */}
-        <div className="mb-16 bg-black border border-blue-900/20 p-10 brush-stroke rounded-xl text-center">
-          <h3 className="text-3xl font-bold font-cinzel text-blue-600 mb-6">Buy on Ape Store</h3>
-          <p className="text-gray-400 mb-8 text-lg">
-            MANYU is exclusively available on Ape Store, the premier decentralized exchange for Base network tokens.
+        <div className="mb-12 sm:mb-16 bg-black border border-blue-900/20 p-6 sm:p-10 brush-stroke rounded-xl text-center">
+          <h3 className="text-xl sm:text-3xl font-bold font-cinzel text-white mb-6">
+            Buy on <span className="text-blue-600">Ape Store</span>
+          </h3>
+          <p className="text-gray-400 mb-6 sm:mb-8 text-sm sm:text-lg">
+            <span className="text-blue-600">MANYU</span> is exclusively available on{" "}
+            <span className="text-blue-600">Ape Store</span>, the premier decentralized exchange for{" "}
+            <span className="text-blue-600">Base network tokens</span>.
           </p>
           <a
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 font-cinzel font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 sm:px-12 py-3 sm:py-4 font-cinzel font-bold text-base sm:text-lg rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
           >
             Trade on Ape Store
             <ExternalLink size={20} className="ml-3" />
@@ -83,43 +93,59 @@ const Buy = () => {
         </div>
 
         {/* Purchase Guide */}
-        <div className="bg-black border border-blue-900/20 p-10 brush-stroke rounded-xl">
-          <h3 className="text-3xl font-bold mb-8 font-cinzel text-blue-600 text-center">Purchase Guide</h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="bg-black border border-blue-900/20 p-6 sm:p-10 brush-stroke rounded-xl">
+          <h3 className="text-xl sm:text-3xl font-bold mb-6 sm:mb-8 font-cinzel text-white text-center">
+            Purchase <span className="text-blue-600">Guide</span>
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center">
-              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-2xl">
+              <div className="bg-blue-600 text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 font-bold text-lg sm:text-2xl">
                 1
               </div>
-              <h4 className="font-bold text-white mb-3 text-lg">Get ETH</h4>
-              <p className="text-gray-300">
-                Purchase ETH from any major exchange and transfer to your Base-compatible wallet.
+              <h4 className="font-bold text-white mb-2 sm:mb-3 text-base sm:text-lg">
+                Get <span className="text-blue-600">ETH</span>
+              </h4>
+              <p className="text-gray-300 text-sm sm:text-base">
+                Purchase <span className="text-blue-600">ETH</span> from any major exchange and transfer to your{" "}
+                <span className="text-blue-600">Base-compatible wallet</span>.
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-2xl">
+              <div className="bg-blue-600 text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 font-bold text-lg sm:text-2xl">
                 2
               </div>
-              <h4 className="font-bold text-white mb-3 text-lg">Connect Wallet</h4>
-              <p className="text-gray-300">
-                Connect your MetaMask, Coinbase Wallet, or other Base-compatible wallet to Ape Store.
+              <h4 className="font-bold text-white mb-2 sm:mb-3 text-base sm:text-lg">
+                Connect <span className="text-blue-600">Wallet</span>
+              </h4>
+              <p className="text-gray-300 text-sm sm:text-base">
+                Connect your <span className="text-blue-600">MetaMask</span>,{" "}
+                <span className="text-blue-600">Coinbase Wallet</span>, or other Base-compatible wallet to{" "}
+                <span className="text-blue-600">Ape Store</span>.
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-2xl">
+              <div className="bg-blue-600 text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 font-bold text-lg sm:text-2xl">
                 3
               </div>
-              <h4 className="font-bold text-white mb-3 text-lg">Swap ETH</h4>
-              <p className="text-gray-300">
-                Use the contract address to find MANYU and swap your ETH for MANYU tokens.
+              <h4 className="font-bold text-white mb-2 sm:mb-3 text-base sm:text-lg">
+                Swap <span className="text-blue-600">ETH</span>
+              </h4>
+              <p className="text-gray-300 text-sm sm:text-base">
+                Use the <span className="text-blue-600">contract address</span> to find{" "}
+                <span className="text-blue-600">MANYU</span> and swap your <span className="text-blue-600">ETH</span>{" "}
+                for <span className="text-blue-600">MANYU tokens</span>.
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-2xl">
+              <div className="bg-blue-600 text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 font-bold text-lg sm:text-2xl">
                 4
               </div>
-              <h4 className="font-bold text-white mb-3 text-lg">Hold & Participate</h4>
-              <p className="text-gray-300">
-                Welcome to MANYU! Hold your tokens and participate in our growing community.
+              <h4 className="font-bold text-white mb-2 sm:mb-3 text-base sm:text-lg">
+                Hold & <span className="text-blue-600">Participate</span>
+              </h4>
+              <p className="text-gray-300 text-sm sm:text-base">
+                Welcome to <span className="text-blue-600">MANYU</span>! Hold your tokens and participate in our growing{" "}
+                <span className="text-blue-600">community</span>.
               </p>
             </div>
           </div>

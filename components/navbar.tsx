@@ -35,20 +35,20 @@ const Navbar = () => {
       className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? "bg-black/90 backdrop-blur-md border-b border-blue-900/20" : "bg-transparent"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold font-cinzel text-blue-600">
-              MANYU <span className="text-gray-300">WIF HAT</span>
+            <Link href="/" className="text-lg sm:text-2xl font-bold font-cinzel text-white">
+              MANYU <span className="text-blue-600">WIF HAT</span>
             </Link>
           </div>
 
           <div className="hidden lg:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-6 xl:space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="font-cinzel text-gray-300 hover:text-blue-600 transition-colors duration-300 px-3 py-2 text-sm font-medium"
+                  className="font-cinzel text-white hover:text-blue-600 transition-colors duration-300 px-3 py-2 text-sm font-medium"
                 >
                   {link.name}
                 </Link>
@@ -56,7 +56,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
             <a
               href="https://t.me/manyuwifhat"
               target="_blank"
@@ -64,7 +64,7 @@ const Navbar = () => {
               className="text-gray-400 hover:text-blue-600 transition-colors p-2"
               title="Join Telegram"
             >
-              <MessageCircle size={20} />
+              <MessageCircle size={18} />
             </a>
             <a
               href="https://twitter.com/manyuwifhat"
@@ -73,11 +73,11 @@ const Navbar = () => {
               className="text-gray-400 hover:text-blue-600 transition-colors p-2"
               title="Follow Twitter"
             >
-              <Twitter size={20} />
+              <Twitter size={18} />
             </a>
             <a
               href="#buy"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-cinzel text-sm font-bold transition-all duration-300"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 xl:px-6 py-2 rounded-lg font-cinzel text-sm font-bold transition-all duration-300"
             >
               BUY MANYU
             </a>
@@ -102,7 +102,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="font-cinzel text-gray-300 hover:text-blue-600 block px-3 py-2 text-base font-medium"
+                className="font-cinzel text-white hover:text-blue-600 block px-3 py-2 text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
